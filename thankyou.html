@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thank You — Red River Pours</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#990000",
+                    "secondary": "#5f5e5e",
+                    "on-surface": "#1a1c1c",
+                    "surface": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                },
+                fontFamily: {
+                    "display": ["Space Grotesk"],
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                },
+            },
+        },
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+    <div class="flex items-center">
+        <a href="index.html"><img alt="Red River Pours Logo" class="w-auto object-contain h-20" src="images/logo.png"/></a>
+    </div>
+    <div class="hidden md:flex items-center space-x-10">
+        <a class="text-stone-600 font-medium hover:text-red-800 transition-colors font-label" href="index.html">Home</a>
+        <a class="text-stone-600 font-medium hover:text-red-800 transition-colors font-label" href="offering.html">Offering</a>
+        <a class="text-stone-600 font-medium hover:text-red-800 transition-colors font-label" href="gallery.html">Gallery</a>
+        <a class="text-stone-600 font-medium hover:text-red-800 transition-colors font-label" href="about.html">About</a>
+    </div>
+    <a href="quote.html" class="bg-stone-900 text-white px-6 py-2.5 rounded-lg font-headline font-bold text-sm tracking-tight hover:bg-stone-800 border border-primary/20 hover:border-primary transition-all active:scale-95 duration-200">
+        Get a Quote
+    </a>
+</div>
+</nav>
+
+<main class="pt-20 min-h-screen flex items-center">
+    <section class="py-24 w-full">
+        <div class="max-w-2xl mx-auto px-8 text-center">
+
+            <span class="material-symbols-outlined text-primary mb-6 block" style="font-size: 4rem; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">celebration</span>
+
+            <h1 class="text-4xl md:text-6xl font-display font-bold tracking-tighter text-on-surface mb-6 uppercase">Thank You!</h1>
+
+            <p class="text-xl text-secondary leading-relaxed mb-4">
+                We're so excited you reached out — your event is already on our radar and we can't wait to be a part of it.
+            </p>
+            <p class="text-lg text-secondary leading-relaxed mb-10">
+                We'll review your details and get back to you with a fully custom quote as soon as possible — typically within 24 hours. In the meantime, feel free to follow along on Instagram <a href="https://www.instagram.com/redriverpours" target="_blank" class="text-primary hover:underline font-medium">@redriverpours</a> for a peek at what we've been pouring!
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html" class="px-8 py-4 bg-stone-900 text-white font-headline font-bold text-sm tracking-widest uppercase rounded-lg hover:bg-primary transition-all duration-200">
+                    Back to Home
+                </a>
+                <a href="offering.html" class="px-8 py-4 border border-stone-300 text-stone-800 font-headline font-bold text-sm tracking-widest uppercase rounded-lg hover:border-primary hover:text-primary transition-all duration-200">
+                    Explore Offering
+                </a>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-12 bg-stone-100">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div>
+        <div class="font-headline font-bold text-2xl mb-6">Red River Pours</div>
+        <p class="text-stone-500 font-inter text-sm leading-relaxed max-w-xs">Serving the Dallas–Fort Worth Metroplex and Southern Oklahoma with premium mobile bar experiences and expert liquid hospitality.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-8">
+        <div>
+            <h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary">Explore</h4>
+            <ul class="space-y-4">
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm" href="offering.html">Offering</a></li>
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm" href="gallery.html">Gallery</a></li>
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm" href="about.html">Our Story</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary">Connect</h4>
+            <ul class="space-y-4">
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm" href="https://www.instagram.com/redriverpours" target="_blank">Instagram</a></li>
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm" href="https://www.facebook.com/redriverpours" target="_blank">Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary">Contact</h4>
+        <a href="mailto:turner.meeks@redriverpours.com" class="text-stone-500 hover:text-primary font-inter text-sm mb-2 block transition-colors">turner.meeks@redriverpours.com</a>
+        <a href="tel:9404352035" class="text-stone-500 hover:text-primary font-inter text-sm mb-6 block transition-colors">(940) 435-2035</a>
+        <a href="quote.html" class="text-xs font-bold font-headline border-b border-primary/30 pb-1 text-primary hover:border-primary tracking-widest transition-colors">BOOK AN EVENT</a>
+    </div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-stone-500 font-inter text-xs">© 2025 Red River Pours. All Rights Reserved.</p>
+    <div class="flex gap-8">
+        <a class="text-stone-500 hover:text-red-800 font-inter text-xs" href="#">Terms</a>
+        <a class="text-stone-500 hover:text-red-800 font-inter text-xs" href="#">Privacy</a>
+    </div>
+</div>
+</footer>
+
+</body>
+</html>

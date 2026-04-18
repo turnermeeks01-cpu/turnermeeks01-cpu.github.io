@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Get a Quote — Red River Pours</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#990000",
+                    "background-light": "#f8f5f5",
+                    "background-dark": "#230f0f",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-container-high": "#e8e8e8",
+                    "on-background": "#1a1c1c",
+                    "secondary": "#5f5e5e",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "on-primary": "#ffffff"
+                },
+                fontFamily: {
+                    "display": ["Space Grotesk"],
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+        },
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 100%;
+        border: 1px solid #d1d5db;
+        border-radius: 0.25rem;
+        padding: 0.6rem 0.75rem;
+        font-family: Inter, sans-serif;
+        font-size: 0.9rem;
+        color: #1a1c1c;
+        background: #fff;
+        outline: none;
+        transition: border-color 0.15s;
+    }
+    input:focus, select:focus, textarea:focus {
+        border-color: #990000;
+        box-shadow: 0 0 0 2px rgba(153,0,0,0.1);
+    }
+    label {
+        display: block;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #990000;
+        margin-bottom: 0.35rem;
+    }
+    .field-hint {
+        font-family: Inter, sans-serif;
+        font-size: 0.78rem;
+        color: #5f5e5e;
+        margin-bottom: 0.4rem;
+    }
+    .required-tag {
+        font-weight: 400;
+        color: #9ca3af;
+        font-size: 0.78rem;
+    }
+    .checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #1a1c1c;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+    .checkbox-label input[type="checkbox"] {
+        width: 1rem;
+        height: 1rem;
+        accent-color: #990000;
+        flex-shrink: 0;
+    }
+</style>
+</head>
+<body class="bg-surface text-on-background font-body antialiased">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+    <div class="flex items-center">
+        <a href="index.html"><img alt="Red River Pours Logo" class="w-auto object-contain h-20" src="images/logo.png"/></a>
+    </div>
+    <div class="hidden md:flex items-center space-x-10">
+        <a class="text-stone-600 font-medium hover:text-red-800 transition-colors font-label" href="index.html">Home</a>
+        <a class="text-stone-600 font-medium hover:text-red-800 transition-colors font-label" href="offering.html">Offering</a>
+        <a class="text-stone-600 font-medium hover:text-red-800 transition-colors font-label" href="gallery.html">Gallery</a>
+        <a class="text-stone-600 font-medium hover:text-red-800 transition-colors font-label" href="about.html">About</a>
+    </div>
+    <a href="quote.html" class="bg-stone-900 text-white px-6 py-2.5 rounded-lg font-headline font-bold text-sm tracking-tight hover:bg-stone-800 border border-primary/20 hover:border-primary transition-all active:scale-95 duration-200">
+        Get a Quote
+    </a>
+</div>
+</nav>
+
+<main class="pt-20">
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-8">
+
+            <!-- Page Title -->
+            <h1 class="text-4xl md:text-6xl font-display font-bold tracking-tighter text-on-surface text-center mb-12 uppercase">Get a Fully Custom Quote</h1>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+                <!-- Left Column -->
+                <div>
+                    <p class="text-on-surface leading-relaxed mb-4">
+                        <strong>Simple and Transparent Pricing.</strong> Just fill out the form with information about your event so we can create a fully custom quote within 24 hours of form submission.
+                    </p>
+                    <p class="text-secondary leading-relaxed mb-8">
+                        The quote will be itemized, so you can add or subtract items as desired. If there are any special considerations or details you would like us to keep in mind while preparing the quote, please add them to the <em>'More Information'</em> section of the form.
+                    </p>
+
+                    <!-- Trailer Image -->
+                    <div class="mb-8 rounded-lg overflow-hidden">
+                        <img src="images/hero.jpg" alt="Red River Pours tap trailer" class="w-full object-cover aspect-[4/3]"/>
+                    </div>
+
+                    <!-- What's Included -->
+                    <div class="bg-stone-900 text-white p-8 rounded-lg">
+                        <h3 class="font-headline font-bold text-lg uppercase tracking-widest mb-6 text-center">Base Rental Includes</h3>
+                        <ul class="space-y-3 text-sm leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary mt-0.5">•</span>
+                                <span>Delivery and setup of the Red River tap trailer</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary mt-0.5">•</span>
+                                <span>4 customizable bar taps — craft beer, sparkling wine, custom cocktails <span class="text-stone-400 italic">(upcharge)</span>, or non-alcoholic options</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary mt-0.5">•</span>
+                                <span>Monitoring of bar taps for cleanliness and replenishment</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary mt-0.5">•</span>
+                                <span>Custom bar menu for your occasion</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary mt-0.5">•</span>
+                                <span>Compostable cups &amp; napkins</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary mt-0.5">•</span>
+                                <span>Ice for serving &amp; chilling beverages</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary mt-0.5">•</span>
+                                <span>General &amp; liquor liability insurance</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary mt-0.5">•</span>
+                                <span>Full breakdown and haul away after the event</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column — Form -->
+                <div>
+                    <form action="https://hook.us2.make.com/7cw0sakcih3qsskhgk9fhqkk1axm8x34" method="POST" class="space-y-6" onsubmit="setTimeout(function(){ window.location.href='thankyou.html'; }, 500);">
+
+                        <!-- Name -->
+                        <fieldset>
+                            <legend class="font-headline font-bold text-base text-on-surface mb-3">Name</legend>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label>First Name <span class="required-tag">(required)</span></label>
+                                    <input type="text" name="first_name" required/>
+                                </div>
+                                <div>
+                                    <label>Last Name <span class="required-tag">(required)</span></label>
+                                    <input type="text" name="last_name" required/>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- How'd you hear -->
+                        <div>
+                            <label>How'd You Hear About Us? <span class="required-tag">(required)</span></label>
+                            <select name="referral_source" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option>Instagram</option>
+                                <option>Facebook</option>
+                                <option>Google Search</option>
+                                <option>Word of Mouth</option>
+                                <option>Wedding Planner / Venue Referral</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label>Email <span class="required-tag">(required)</span></label>
+                            <input type="email" name="email" required/>
+                        </div>
+
+                        <!-- Phone -->
+                        <div>
+                            <label>Phone <span class="required-tag">(required)</span></label>
+                            <input type="tel" name="phone" required/>
+                        </div>
+
+                        <!-- Event Date -->
+                        <div>
+                            <label>Date of Event <span class="required-tag">(required)</span></label>
+                            <p class="field-hint">What is your desired event date?</p>
+                            <input type="date" name="event_date" required/>
+                        </div>
+
+                        <!-- Region -->
+                        <div>
+                            <label>What Area is the Event In? <span class="required-tag">(required)</span></label>
+                            <select name="event_region" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option>Dallas</option>
+                                <option>Fort Worth</option>
+                                <option>Surrounding DFW Area</option>
+                                <option>Southern Oklahoma</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Address -->
+                        <div>
+                            <label>Address or Location of the Event <span class="required-tag">(required)</span></label>
+                            <p class="field-hint">Please share the address or event space location</p>
+                            <input type="text" name="event_address" required/>
+                        </div>
+
+                        <!-- Hours -->
+                        <div>
+                            <label># Hours of Service <span class="required-tag">(required)</span></label>
+                            <p class="field-hint">How many hours do you expect you'll need the rental for?</p>
+                            <input type="number" name="hours" min="1" required/>
+                        </div>
+
+                        <!-- Guest Count -->
+                        <div>
+                            <label>Expected # of Guests <span class="required-tag">(required)</span></label>
+                            <input type="number" name="guest_count" min="1" required/>
+                        </div>
+
+                        <!-- Drink Preferences -->
+                        <div>
+                            <label>What drinks do you plan on having served? <span class="required-tag">(required)</span></label>
+                            <p class="field-hint">Beer, wine, cocktails, mocktails, non-alcoholic — let us know your vision!</p>
+                            <input type="text" name="drink_preferences" required/>
+                        </div>
+
+                        <!-- Add-Ons -->
+                        <div>
+                            <label>Add Additional Services? <span class="required-tag">(required)</span></label>
+                            <p class="field-hint">Select all that apply to be reflected in your custom quote</p>
+                            <div class="space-y-3 mt-2">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="Licensed Bartenders"/>
+                                    Licensed Bartenders
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="Glassware Upgrade"/>
+                                    Glassware Upgrade (instead of compostable cups)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="The Customizer"/>
+                                    The Customizer (custom printed drinkware + keepsake bar sign)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="Garnish Station"/>
+                                    Garnish Station
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="Event Tent"/>
+                                    Event Tent
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="Late Night Extension"/>
+                                    Late Night Extension
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="Custom Cocktails on Tap"/>
+                                    Custom Cocktails on Tap (upcharge)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="No Add-Ons"/>
+                                    Provide Quote with No Add-Ons
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- More Info -->
+                        <div>
+                            <label>More Information</label>
+                            <p class="field-hint">We appreciate as much detail as you can provide so we can give you the most accurate quote!</p>
+                            <textarea name="more_info" rows="5" placeholder="Special requests, venue details, theme, etc."></textarea>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="w-full py-4 bg-stone-900 text-white font-headline font-bold text-sm tracking-widest uppercase rounded-lg hover:bg-primary transition-all duration-200">
+                            Submit
+                        </button>
+
+                        <p class="text-secondary text-sm text-center">For any other inquiries, reach out directly at <a href="mailto:turner.meeks@redriverpours.com" class="text-primary hover:underline">turner.meeks@redriverpours.com</a></p>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-12 bg-stone-100">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div>
+        <div class="font-headline font-bold text-2xl mb-6">Red River Pours</div>
+        <p class="text-stone-500 font-inter text-sm leading-relaxed max-w-xs">Serving the Dallas–Fort Worth Metroplex and Southern Oklahoma with premium mobile bar experiences and expert liquid hospitality.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-8">
+        <div>
+            <h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary">Explore</h4>
+            <ul class="space-y-4">
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm" href="offering.html">Offering</a></li>
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm" href="gallery.html">Gallery</a></li>
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm" href="about.html">Our Story</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary">Connect</h4>
+            <ul class="space-y-4">
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm" href="https://www.instagram.com/redriverpours" target="_blank">Instagram</a></li>
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm" href="https://www.facebook.com/redriverpours" target="_blank">Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary">Contact</h4>
+        <a href="mailto:turner.meeks@redriverpours.com" class="text-stone-500 hover:text-primary font-inter text-sm mb-2 block transition-colors">turner.meeks@redriverpours.com</a>
+        <a href="tel:9404352035" class="text-stone-500 hover:text-primary font-inter text-sm mb-6 block transition-colors">(940) 435-2035</a>
+        <a href="quote.html" class="text-xs font-bold font-headline border-b border-primary/30 pb-1 text-primary hover:border-primary tracking-widest transition-colors">BOOK AN EVENT</a>
+    </div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-stone-500 font-inter text-xs">© 2025 Red River Pours. All Rights Reserved.</p>
+    <div class="flex gap-8">
+        <a class="text-stone-500 hover:text-red-800 font-inter text-xs" href="#">Terms</a>
+        <a class="text-stone-500 hover:text-red-800 font-inter text-xs" href="#">Privacy</a>
+    </div>
+</div>
+</footer>
+
+</body>
+</html>
