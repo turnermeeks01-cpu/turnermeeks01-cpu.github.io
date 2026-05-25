@@ -43,6 +43,8 @@
         .crimson-gradient {
             background: linear-gradient(45deg, #7a0000 0%, #990000 100%);
         }
+        .hero-section { min-height: 100svh; }
+        @media (min-width: 768px) { .hero-section { min-height: 870px; } }
     </style>
 </head>
 <body class="bg-background text-on-background font-body antialiased">
@@ -77,7 +79,7 @@
 </nav>
 <main class="pt-20">
 <!-- Hero Section -->
-<section class="relative min-h-screen md:min-h-[870px] flex items-center md:items-end overflow-hidden pb-16">
+<section class="hero-section relative flex items-end overflow-hidden pb-16">
 <div class="absolute inset-0 z-0 overflow-hidden">
 <img class="w-full h-full object-cover origin-center" alt="Red River Pours tap trailer at an outdoor event" src="images/hero.jpg" style=""/>
 <div class="absolute inset-0 bg-stone-950/20"></div>
@@ -90,7 +92,7 @@
 <p class="text-xl md:text-2xl font-display font-light text-stone-100 tracking-wide" style="">
                         Off-Grid Mobile Bar Service Without Sacrificing Elegance
                     </p></div>
-<a href="/quote/" class="bg-white/10 backdrop-blur-md text-white border border-white/40 px-10 py-5 rounded-lg font-headline font-bold text-lg tracking-tight hover:bg-white/20 hover:border-white transition-all shadow-2xl">
+<a href="/quote/" class="bg-white/10 backdrop-blur-md text-white border border-white/40 px-8 py-3 rounded-lg font-headline font-bold text-sm tracking-tight hover:bg-white/20 hover:border-white transition-all shadow-2xl">
                         Get a Free Quote
                     </a>
 </div>
