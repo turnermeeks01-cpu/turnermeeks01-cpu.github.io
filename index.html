@@ -1,71 +1,73 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
+<html class="light" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home — Red River Pours</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#990000",
-                        "background-light": "#f8f5f5",
-                        "background-dark": "#230f0f",
-                        "surface-container-highest": "#e2e2e2",
-                        "surface-container-high": "#e8e8e8",
-                        "on-background": "#1a1c1c",
-                        "secondary": "#5f5e5e",
-                        "on-surface": "#1a1c1c",
-                        "surface-container-lowest": "#ffffff",
-                        "surface": "#f9f9f9",
-                        "surface-container-low": "#f3f3f3",
-                        "on-primary": "#ffffff"
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk"],
-                        "headline": ["Space Grotesk"],
-                        "body": ["Inter"],
-                        "label": ["Space Grotesk"]
-                    },
-                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#990000",
+                    "background-light": "#f8f5f5",
+                    "background-dark": "#230f0f",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-container-high": "#e8e8e8",
+                    "on-background": "#1a1c1c",
+                    "secondary": "#5f5e5e",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "on-primary": "#ffffff"
                 },
+                fontFamily: {
+                    "display": ["Space Grotesk"],
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
             },
-        }
-    </script>
+        },
+    }
+</script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .crimson-gradient {
-            background: linear-gradient(45deg, #7a0000 0%, #990000 100%);
-        }
-        .hero-section { min-height: 100svh; }
-        @media (min-width: 768px) { .hero-section { min-height: 870px; } }
-    </style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .crimson-gradient {
+        background: linear-gradient(45deg, #7a0000 0%, #990000 100%);
+    }
+    .hero-section { min-height: 100svh; }
+    @media (min-width: 768px) { .hero-section { min-height: 870px; } }
+</style>
 </head>
-<body class="bg-background text-on-background font-body antialiased">
+<body class="bg-surface text-on-background font-body antialiased">
+
 <!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md">
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md">
 <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-<div class="flex items-center">
-<img alt="Red River Pours Logo" class="w-auto object-contain h-20" src="images/logo.png" style=""/>
-</div>
-<div class="hidden md:flex items-center space-x-10">
-<a class="dark:text-red-400 font-bold border-b-2 dark:border-red-400 pb-1 font-label" href="/" style="">Home</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-red-800 transition-colors font-label" href="/the-experience/">The Experience</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-red-800 transition-colors font-label" href="/how-we-work/" style="">How We Work</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-red-800 transition-colors font-label" href="/gallery/" style="">Gallery</a>
-</div>
-<a href="/quote/" class="hidden md:inline-block bg-stone-900 text-white px-6 py-2.5 rounded-lg font-headline font-bold text-sm tracking-tight hover:bg-stone-800 border border-primary/20 hover:border-primary transition-all active:scale-95 duration-200">
-                Get a Quote
-            </a>
-<button id="hamburger-btn" class="md:hidden flex items-center justify-center p-2 text-stone-800" aria-label="Toggle menu">
-    <span id="hamburger-icon" class="material-symbols-outlined" style="font-size: 1.75rem;">menu</span>
-</button>
+    <div class="flex items-center">
+        <a href="/"><img alt="Red River Pours Logo" class="w-auto object-contain h-20" src="/images/logo.png"/></a>
+    </div>
+    <div class="hidden md:flex items-center space-x-10">
+        <a class="font-bold border-b-2 border-stone-900 pb-1 font-label" href="/">Home</a>
+        <a class="text-stone-600 font-medium hover:text-red-800 transition-colors font-label" href="/the-experience/">The Experience</a>
+        <a class="text-stone-600 font-medium hover:text-red-800 transition-colors font-label" href="/how-we-work/">How We Work</a>
+        <a class="text-stone-600 font-medium hover:text-red-800 transition-colors font-label" href="/gallery/">Gallery</a>
+    </div>
+    <a href="/quote/" class="hidden md:inline-block bg-stone-900 text-white px-6 py-2.5 rounded-lg font-headline font-bold text-sm tracking-tight hover:bg-stone-800 border border-primary/20 hover:border-primary transition-all active:scale-95 duration-200">
+        Get a Quote
+    </a>
+    <button id="hamburger-btn" class="md:hidden flex items-center justify-center p-2 text-stone-800" aria-label="Toggle menu">
+        <span id="hamburger-icon" class="material-symbols-outlined" style="font-size: 1.75rem;">menu</span>
+    </button>
 </div>
 <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white shadow-lg border-t border-stone-100 z-50">
     <div class="flex flex-col px-8 py-4">
@@ -77,162 +79,171 @@
     </div>
 </div>
 </nav>
+
 <main class="pt-20">
+
 <!-- Hero Section -->
 <section class="hero-section relative flex items-end overflow-hidden pb-16">
 <div class="absolute inset-0 z-0 overflow-hidden">
-<img class="w-full h-full object-cover origin-center" alt="Red River Pours tap trailer at an outdoor event" src="images/hero.jpg" style=""/>
-<div class="absolute inset-0 bg-stone-950/20"></div>
+    <img class="w-full h-full object-cover origin-center" alt="Red River Pours tap trailer at an outdoor event" src="/images/hero.jpg"/>
+    <div class="absolute inset-0 bg-stone-950/20"></div>
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
-<div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
-<div><h1 class="text-4xl md:text-7xl font-display font-bold tracking-tighter text-white mb-2 leading-tight uppercase" style="">
-                        Red River Pours
-                    </h1>
-<p class="text-xl md:text-2xl font-display font-light text-stone-100 tracking-wide" style="">
-                        Off-Grid Mobile Bar Service Without Sacrificing Elegance
-                    </p></div>
-<a href="/quote/" class="bg-white/10 backdrop-blur-md text-white border border-white/40 px-8 py-3 rounded-lg font-headline font-bold text-sm tracking-tight hover:bg-white/20 hover:border-white transition-all shadow-2xl">
-                        Get a Free Quote
-                    </a>
-</div>
+    <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
+        <div>
+            <h1 class="text-4xl md:text-7xl font-display font-bold tracking-tighter text-white mb-2 leading-tight uppercase">
+                Red River Pours
+            </h1>
+            <p class="text-xl md:text-2xl font-display font-light text-stone-100 tracking-wide">
+                Off-Grid Mobile Bar Service Without Sacrificing Elegance
+            </p>
+        </div>
+        <a href="/quote/" class="bg-white/10 backdrop-blur-md text-white border border-white/40 px-8 py-3 rounded-lg font-headline font-bold text-sm tracking-tight hover:bg-white/20 hover:border-white transition-all shadow-2xl">
+            Get a Free Quote
+        </a>
+    </div>
 </div>
 </section>
+
 <!-- What Sets Us Apart -->
 <section class="py-32 bg-surface">
 <div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row gap-16 items-end mb-24">
-<div class="md:w-1/2">
-<span class="text-primary font-headline font-bold tracking-widest uppercase text-sm mb-4 block">Why Red River Pours</span>
-<h2 class="text-4xl md:text-6xl font-headline font-bold tracking-tighter text-on-surface leading-tight">A Bar That Flows With Your Event</h2>
-</div>
-<div class="md:w-1/2">
-<p class="text-lg text-secondary leading-relaxed font-body">Most bar setups bring tradeoffs — noise, clutter, long waits. Ours doesn't. Every detail of the Red River Pours trailer is designed to enhance your evening, not compete with it.</p>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<!-- Differentiator 1 -->
-<div class="border-t-2 border-primary pt-10">
-<div class="flex items-center gap-3 mb-4 text-primary">
-<span class="material-symbols-outlined text-3xl" style='font-variation-settings: "FILL" 1;'>volume_off</span>
-</div>
-<h3 class="text-2xl font-headline font-bold text-on-surface mb-4 min-h-16 flex items-start">Dead Silent Operation</h3>
-<p class="text-secondary leading-relaxed">No generators, no hum in the background, no noise pollution cutting through your evening. Our trailer operates quietly so the only thing your guests notice is a great atmosphere — and unlike other mobile bars, there's no generator surcharge hiding in your quote.</p>
-</div>
-<!-- Differentiator 2 -->
-<div class="border-t-2 border-primary pt-10">
-<div class="flex items-center gap-3 mb-4 text-primary">
-<span class="material-symbols-outlined text-3xl" style='font-variation-settings: "FILL" 1;'>water_drop</span>
-</div>
-<h3 class="text-2xl font-headline font-bold text-on-surface mb-4 min-h-16 flex items-start">Four Taps, No Lines</h3>
-<p class="text-secondary leading-relaxed">Traditional bar setups create bottlenecks. Our four-tap system pours drinks fast — multiple guests served simultaneously, which means your party keeps moving and nobody is stuck waiting.</p>
-</div>
-<!-- Differentiator 3 -->
-<div class="border-t-2 border-primary pt-10">
-<div class="flex items-center gap-3 mb-4 text-primary">
-<span class="material-symbols-outlined text-3xl" style='font-variation-settings: "FILL" 1;'>photo_camera</span>
-</div>
-<h3 class="text-2xl font-headline font-bold text-on-surface mb-4 min-h-16 flex items-start">A Focal Point, Not an Afterthought</h3>
-<p class="text-secondary leading-relaxed">Purpose-built for events, our trailer is designed to look as good as it functions — a visual centerpiece that photographs beautifully and draws guests in naturally — something a folding table and a cooler simply can't do.</p>
-</div>
-</div>
+    <div class="flex flex-col md:flex-row gap-16 items-end mb-24">
+        <div class="md:w-1/2">
+            <span class="text-primary font-headline font-bold tracking-widest uppercase text-sm mb-4 block">Why Red River Pours</span>
+            <h2 class="text-4xl md:text-6xl font-headline font-bold tracking-tighter text-on-surface leading-tight">A Bar That Flows With Your Event</h2>
+        </div>
+        <div class="md:w-1/2">
+            <p class="text-lg text-secondary leading-relaxed font-body">Most bar setups bring tradeoffs — noise, clutter, long waits. Ours doesn't. Every detail of the Red River Pours trailer is designed to enhance your evening, not compete with it.</p>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Differentiator 1 -->
+        <div class="border-t-2 border-primary pt-10">
+            <div class="flex items-center gap-3 mb-4 text-primary">
+                <span class="material-symbols-outlined text-3xl" style='font-variation-settings: "FILL" 1;'>volume_off</span>
+            </div>
+            <h3 class="text-2xl font-headline font-bold text-on-surface mb-4 min-h-16 flex items-start">Dead Silent Operation</h3>
+            <p class="text-secondary leading-relaxed">No generators, no hum in the background, no noise pollution cutting through your evening. Our trailer operates quietly so the only thing your guests notice is a great atmosphere — and unlike other mobile bars, there's no generator surcharge hiding in your quote.</p>
+        </div>
+        <!-- Differentiator 2 -->
+        <div class="border-t-2 border-primary pt-10">
+            <div class="flex items-center gap-3 mb-4 text-primary">
+                <span class="material-symbols-outlined text-3xl" style='font-variation-settings: "FILL" 1;'>water_drop</span>
+            </div>
+            <h3 class="text-2xl font-headline font-bold text-on-surface mb-4 min-h-16 flex items-start">Four Taps, No Lines</h3>
+            <p class="text-secondary leading-relaxed">Traditional bar setups create bottlenecks. Our four-tap system pours drinks fast — multiple guests served simultaneously, which means your party keeps moving and nobody is stuck waiting.</p>
+        </div>
+        <!-- Differentiator 3 -->
+        <div class="border-t-2 border-primary pt-10">
+            <div class="flex items-center gap-3 mb-4 text-primary">
+                <span class="material-symbols-outlined text-3xl" style='font-variation-settings: "FILL" 1;'>photo_camera</span>
+            </div>
+            <h3 class="text-2xl font-headline font-bold text-on-surface mb-4 min-h-16 flex items-start">A Focal Point, Not an Afterthought</h3>
+            <p class="text-secondary leading-relaxed">Purpose-built for events, our trailer is designed to look as good as it functions — a visual centerpiece that photographs beautifully and draws guests in naturally — something a folding table and a cooler simply can't do.</p>
+        </div>
+    </div>
 </div>
 </section>
+
 <!-- Pricing Callout -->
 <section class="py-32 bg-surface-container-low">
 <div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row md:items-center justify-between gap-16">
-<div class="md:w-1/2">
-<span class="text-primary font-headline font-bold tracking-widest uppercase text-sm mb-4 block">Transparent Pricing</span>
-<h2 class="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-on-surface mb-6">Starting at $1,500</h2>
-<p class="text-secondary text-lg leading-relaxed mb-8">Every quote is built around your event — your guest count, your drinks, your vision. No generator fees. No automatic gratuity added at checkout. Just a fully itemized proposal within 24 hours.</p>
-<a href="/the-experience/" class="inline-block border-b-2 border-primary text-primary font-headline font-bold tracking-tight hover:opacity-70 transition-opacity">See everything that's included →</a>
-</div>
-<div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="bg-surface p-8 rounded-lg">
-<span class="material-symbols-outlined text-primary mb-3 block" style='font-variation-settings: "FILL" 1;'>local_shipping</span>
-<p class="font-headline font-bold mb-1">Delivery & Setup</p>
-<p class="text-secondary text-sm leading-relaxed">Full trailer delivery, setup, and breakdown at your venue.</p>
-</div>
-<div class="bg-surface p-8 rounded-lg">
-<span class="material-symbols-outlined text-primary mb-3 block" style='font-variation-settings: "FILL" 1;'>water_drop</span>
-<p class="font-headline font-bold mb-1">Four Customizable Taps</p>
-<p class="text-secondary text-sm leading-relaxed">Craft beer, sparkling wine, cocktails, or non-alcoholic options.</p>
-</div>
-<div class="bg-surface p-8 rounded-lg">
-<span class="material-symbols-outlined text-primary mb-3 block" style='font-variation-settings: "FILL" 1;'>menu_book</span>
-<p class="font-headline font-bold mb-1">Custom Drink Menu</p>
-<p class="text-secondary text-sm leading-relaxed">A personalized menu card printed and displayed at the trailer.</p>
-</div>
-<div class="bg-surface p-8 rounded-lg">
-<span class="material-symbols-outlined text-primary mb-3 block" style='font-variation-settings: "FILL" 1;'>verified_user</span>
-<p class="font-headline font-bold mb-1">Fully Insured</p>
-<p class="text-secondary text-sm leading-relaxed">Full liability coverage included with every booking.</p>
-</div>
-</div>
-</div>
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-16">
+        <div class="md:w-1/2">
+            <span class="text-primary font-headline font-bold tracking-widest uppercase text-sm mb-4 block">Transparent Pricing</span>
+            <h2 class="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-on-surface mb-6">Starting at $1,500</h2>
+            <p class="text-secondary text-lg leading-relaxed mb-8">Every quote is built around your event — your guest count, your drinks, your vision. No generator fees. No automatic gratuity added at checkout. Just a fully itemized proposal within 24 hours.</p>
+            <a href="/the-experience/" class="inline-block border-b-2 border-primary text-primary font-headline font-bold tracking-tight hover:opacity-70 transition-opacity">See everything that's included →</a>
+        </div>
+        <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-surface p-8 rounded-lg">
+                <span class="material-symbols-outlined text-primary mb-3 block" style='font-variation-settings: "FILL" 1;'>local_shipping</span>
+                <p class="font-headline font-bold mb-1">Delivery & Setup</p>
+                <p class="text-secondary text-sm leading-relaxed">Full trailer delivery, setup, and breakdown at your venue.</p>
+            </div>
+            <div class="bg-surface p-8 rounded-lg">
+                <span class="material-symbols-outlined text-primary mb-3 block" style='font-variation-settings: "FILL" 1;'>water_drop</span>
+                <p class="font-headline font-bold mb-1">Four Customizable Taps</p>
+                <p class="text-secondary text-sm leading-relaxed">Craft beer, sparkling wine, cocktails, or non-alcoholic options.</p>
+            </div>
+            <div class="bg-surface p-8 rounded-lg">
+                <span class="material-symbols-outlined text-primary mb-3 block" style='font-variation-settings: "FILL" 1;'>menu_book</span>
+                <p class="font-headline font-bold mb-1">Custom Drink Menu</p>
+                <p class="text-secondary text-sm leading-relaxed">A personalized menu card printed and displayed at the trailer.</p>
+            </div>
+            <div class="bg-surface p-8 rounded-lg">
+                <span class="material-symbols-outlined text-primary mb-3 block" style='font-variation-settings: "FILL" 1;'>verified_user</span>
+                <p class="font-headline font-bold mb-1">Fully Insured</p>
+                <p class="text-secondary text-sm leading-relaxed">Full liability coverage included with every booking.</p>
+            </div>
+        </div>
+    </div>
 </div>
 </section>
 
 <!-- Instagram Feed -->
 <section class="py-32 bg-surface overflow-hidden">
 <div class="max-w-7xl mx-auto px-8 mb-16 flex justify-between items-end">
-<div>
-<h2 class="text-4xl font-headline font-bold tracking-tighter" style="">Follow the Pours</h2>
-<a href="https://www.instagram.com/redriverpours" target="_blank" class="text-secondary mt-2 hover:text-primary transition-colors" style="">@redriverpours on Instagram</a>
-</div>
-<a href="#" class="text-primary font-headline font-bold hover:underline" style="">View Gallery</a>
+    <div>
+        <h2 class="text-4xl font-headline font-bold tracking-tighter">Follow the Pours</h2>
+        <a href="https://www.instagram.com/redriverpours" target="_blank" class="text-secondary mt-2 hover:text-primary transition-colors">@redriverpours on Instagram</a>
+    </div>
+    <a href="/gallery/" class="text-primary font-headline font-bold hover:underline">View Gallery</a>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
-<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Cold pint of beer" src="https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=600&q=80" style=""/>
-<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Red River Pours event" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" style=""/>
-<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Red River Pours cocktail" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" style=""/>
-<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Red River Pours event at night" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" style=""/>
-<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Red River Pours wine service" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80" style=""/>
-<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Cold brew coffee in a glass" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80" style=""/>
+    <img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Cold pint of beer" src="https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=600&q=80"/>
+    <img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Red River Pours event" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80"/>
+    <img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Red River Pours cocktail" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80"/>
+    <img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Red River Pours event at night" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80"/>
+    <img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Red River Pours wine service" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80"/>
+    <img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" alt="Cold brew coffee in a glass" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80"/>
 </div>
 </section>
+
 </main>
+
 <!-- Footer -->
-<footer class="w-full py-12 bg-stone-100 dark:bg-stone-950">
+<footer class="w-full py-12 bg-stone-100">
 <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
-<div>
-<div class="font-space-grotesk font-bold text-2xl mb-6" style="">Red River Pours</div>
-<p class="text-stone-500 font-inter text-sm leading-relaxed max-w-xs" style="">Serving the Dallas–Fort Worth Metroplex and Southern Oklahoma with premium mobile bar experiences and expert liquid hospitality.</p>
+    <div>
+        <div class="font-headline font-bold text-2xl mb-6">Red River Pours</div>
+        <p class="text-stone-500 font-inter text-sm leading-relaxed max-w-xs">Serving the Dallas–Fort Worth Metroplex and Southern Oklahoma with premium mobile bar experiences and expert liquid hospitality.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-8">
+        <div>
+            <h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary">Explore</h4>
+            <ul class="space-y-4">
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm transition-opacity hover:opacity-80" href="/the-experience/">The Experience</a></li>
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm transition-opacity hover:opacity-80" href="/gallery/">Gallery</a></li>
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm transition-opacity hover:opacity-80" href="/how-we-work/">How We Work</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary">Connect</h4>
+            <ul class="space-y-4">
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm transition-opacity hover:opacity-80" href="https://www.instagram.com/redriverpours" target="_blank">Instagram</a></li>
+                <li><a class="text-stone-500 hover:text-red-800 font-inter text-sm transition-opacity hover:opacity-80" href="https://www.facebook.com/redriverpours" target="_blank">Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary">Contact</h4>
+        <a href="mailto:turner.meeks@redriverpours.com" class="text-stone-500 hover:text-primary font-inter text-sm mb-2 block transition-colors">turner.meeks@redriverpours.com</a>
+        <a href="tel:9404352035" class="text-stone-500 hover:text-primary font-inter text-sm mb-2 block transition-colors">(940) 435-2035</a>
+        <p class="text-stone-500 font-inter text-sm mb-6">Serving DFW &amp; Southern Oklahoma</p>
+        <a href="/quote/" class="text-xs font-bold font-headline border-b border-primary/30 pb-1 text-primary hover:border-primary tracking-widest transition-colors">BOOK AN EVENT</a>
+    </div>
 </div>
-<div class="grid grid-cols-2 gap-8">
-<div>
-<h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary" style="">Explore</h4>
-<ul class="space-y-4">
-<li style=""><a class="text-stone-500 hover:text-red-800 font-inter text-sm transition-opacity hover:opacity-80" href="/the-experience/">The Experience</a></li>
-<li style=""><a class="text-stone-500 hover:text-red-800 font-inter text-sm transition-opacity hover:opacity-80" href="/gallery/" style="">Gallery</a></li>
-<li style=""><a class="text-stone-500 hover:text-red-800 font-inter text-sm transition-opacity hover:opacity-80" href="/how-we-work/" style="">How We Work</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary" style="">Connect</h4>
-<ul class="space-y-4">
-<li style=""><a class="text-stone-500 hover:text-red-800 font-inter text-sm transition-opacity hover:opacity-80" href="https://www.instagram.com/redriverpours" target="_blank" style="">Instagram</a></li>
-<li style=""><a class="text-stone-500 hover:text-red-800 font-inter text-sm transition-opacity hover:opacity-80" href="https://www.facebook.com/redriverpours" target="_blank" style="">Facebook</a></li>
-</ul>
-</div>
-</div>
-<div>
-<h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary" style="">Contact</h4>
-<a href="mailto:turner.meeks@redriverpours.com" class="text-stone-500 hover:text-primary font-inter text-sm mb-2 block transition-colors" style="">turner.meeks@redriverpours.com</a>
-<a href="tel:9404352035" class="text-stone-500 hover:text-primary font-inter text-sm mb-2 block transition-colors" style="">(940) 435-2035</a>
-<p class="text-stone-500 font-inter text-sm mb-6" style="">Serving DFW &amp; Southern Oklahoma</p>
-<button class="text-xs font-bold font-headline border-b border-primary/30 pb-1 text-primary hover:border-primary tracking-widest transition-colors">BOOK AN EVENT</button>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="text-stone-500 font-inter text-xs" style="">© 2025 Red River Pours. All Rights Reserved.</p>
-<div class="flex gap-8">
-<a class="text-stone-500 hover:text-red-800 font-inter text-xs transition-opacity" href="#" style="">Terms</a>
-<a class="text-stone-500 hover:text-red-800 font-inter text-xs transition-opacity" href="#" style="">Privacy</a>
-</div>
+<div class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-stone-500 font-inter text-xs">© 2025 Red River Pours. All Rights Reserved.</p>
+    <div class="flex gap-8">
+        <a class="text-stone-500 hover:text-red-800 font-inter text-xs transition-opacity" href="#">Terms</a>
+        <a class="text-stone-500 hover:text-red-800 font-inter text-xs transition-opacity" href="#">Privacy</a>
+    </div>
 </div>
 </footer>
+
 <script>
     const btn = document.getElementById('hamburger-btn');
     const menu = document.getElementById('mobile-menu');
@@ -242,4 +253,5 @@
         icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
     });
 </script>
-</body></html>
+</body>
+</html>

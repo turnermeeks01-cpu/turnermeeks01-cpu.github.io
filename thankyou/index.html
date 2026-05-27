@@ -14,16 +14,25 @@
             extend: {
                 colors: {
                     "primary": "#990000",
+                    "background-light": "#f8f5f5",
+                    "background-dark": "#230f0f",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-container-high": "#e8e8e8",
+                    "on-background": "#1a1c1c",
                     "secondary": "#5f5e5e",
                     "on-surface": "#1a1c1c",
+                    "surface-container-lowest": "#ffffff",
                     "surface": "#f9f9f9",
                     "surface-container-low": "#f3f3f3",
+                    "on-primary": "#ffffff"
                 },
                 fontFamily: {
                     "display": ["Space Grotesk"],
                     "headline": ["Space Grotesk"],
                     "body": ["Inter"],
+                    "label": ["Space Grotesk"]
                 },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
             },
         },
     }
@@ -72,7 +81,7 @@
 
             <span class="material-symbols-outlined text-primary mb-6 block" style="font-size: 4rem; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">celebration</span>
 
-            <h1 class="text-4xl md:text-6xl font-display font-bold tracking-tighter text-on-surface mb-6 uppercase">Thank You!</h1>
+            <h1 class="text-4xl md:text-6xl font-display font-bold tracking-tighter text-on-surface mb-6">Thank You!</h1>
 
             <p class="text-xl text-secondary leading-relaxed mb-4">
                 We're so excited you reached out — your event is already on our radar and we can't wait to be a part of it.
@@ -85,7 +94,7 @@
                 <a href="/" class="px-8 py-4 bg-stone-900 text-white font-headline font-bold text-sm tracking-widest uppercase rounded-lg hover:bg-primary transition-all duration-200">
                     Back to Home
                 </a>
-                <a href="/offering/" class="px-8 py-4 border border-stone-300 text-stone-800 font-headline font-bold text-sm tracking-widest uppercase rounded-lg hover:border-primary hover:text-primary transition-all duration-200">
+                <a href="/the-experience/" class="px-8 py-4 border border-stone-300 text-stone-800 font-headline font-bold text-sm tracking-widest uppercase rounded-lg hover:border-primary hover:text-primary transition-all duration-200">
                     Explore The Experience
                 </a>
             </div>
@@ -121,7 +130,8 @@
     <div>
         <h4 class="font-headline font-bold mb-6 uppercase text-xs tracking-widest text-primary">Contact</h4>
         <a href="mailto:turner.meeks@redriverpours.com" class="text-stone-500 hover:text-primary font-inter text-sm mb-2 block transition-colors">turner.meeks@redriverpours.com</a>
-        <a href="tel:9404352035" class="text-stone-500 hover:text-primary font-inter text-sm mb-6 block transition-colors">(940) 435-2035</a>
+        <a href="tel:9404352035" class="text-stone-500 hover:text-primary font-inter text-sm mb-2 block transition-colors">(940) 435-2035</a>
+        <p class="text-stone-500 font-inter text-sm mb-6">Serving DFW &amp; Southern Oklahoma</p>
         <a href="/quote/" class="text-xs font-bold font-headline border-b border-primary/30 pb-1 text-primary hover:border-primary tracking-widest transition-colors">BOOK AN EVENT</a>
     </div>
 </div>
