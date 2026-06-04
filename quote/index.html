@@ -405,14 +405,16 @@
         icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
     });
 
-    document.getElementById('quote-form').addEventListener('submit', function(e) {
+    document.getElementById('quote-form').addEventListener('submit', async function(e) {
         e.preventDefault();
         var formData = new FormData(this);
-        fetch('https://hook.us2.make.com/7cw0sakcih3qsskhgk9fhqkk1axm8x34', {
-            method: 'POST',
-            mode: 'no-cors',
-            body: formData
-        });
+        try {
+            await fetch('https://hook.us2.make.com/7cw0sakcih3qsskhgk9fhqkk1axm8x34', {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            });
+        } catch (err) {}
         window.location.href = '/thankyou/';
     });
 </script>
