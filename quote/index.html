@@ -216,6 +216,12 @@
                 <div>
                     <form id="quote-form" class="space-y-6">
 
+                        <!-- Honeypot: invisible to humans, catches spam bots -->
+                        <div style="position:absolute; left:-9999px; top:-9999px;" aria-hidden="true">
+                            <label for="company-field">Company</label>
+                            <input type="text" id="company-field" name="company" tabindex="-1" autocomplete="off"/>
+                        </div>
+
                         <!-- Name -->
                         <fieldset>
                             <legend class="font-headline font-bold text-base text-on-surface mb-3">Name</legend>
@@ -318,8 +324,8 @@
                                     Custom Bar Sign (LED sign printed to your spec, yours to keep)
                                 </label>
                                 <label class="checkbox-label">
-                                    <input type="checkbox" name="addons" value="Glassware Upgrade"/>
-                                    Glassware Upgrade (instead of compostable cups)
+                                    <input type="checkbox" name="addons" value="Couple's Keepsake Glassware"/>
+                                    Couple's Keepsake Glassware (custom glasses for the couple, yours to keep)
                                 </label>
                                 <label class="checkbox-label">
                                     <input type="checkbox" name="addons" value="Garnish Station"/>
@@ -348,9 +354,14 @@
                         </div>
 
                         <!-- Submit -->
-                        <button type="submit" class="w-full py-4 bg-stone-900 text-white font-headline font-bold text-sm tracking-widest uppercase rounded-lg hover:bg-primary transition-all duration-200">
+                        <button type="submit" id="submit-btn" class="w-full py-4 bg-stone-900 text-white font-headline font-bold text-sm tracking-widest uppercase rounded-lg hover:bg-primary transition-all duration-200 disabled:opacity-60 disabled:cursor-wait">
                             Submit
                         </button>
+
+                        <!-- Shown only if the submission fails to send -->
+                        <div id="form-error" class="hidden bg-red-50 border border-primary/30 rounded-lg p-4 text-sm leading-relaxed text-on-surface">
+                            <strong class="text-primary">Something went wrong sending your request.</strong> Please try again in a moment — or reach us directly at <a href="tel:9404352035" class="text-primary font-bold underline">(940)&nbsp;435-2035</a> or <a href="mailto:turner.meeks@redriverpours.com" class="text-primary font-bold underline">turner.meeks@redriverpours.com</a> and we'll get your quote started.
+                        </div>
 
                         <p class="text-secondary text-sm text-center">For any other inquiries, reach out directly at <a href="mailto:turner.meeks@redriverpours.com" class="text-primary hover:underline">turner.meeks@redriverpours.com</a></p>
 
@@ -408,17 +419,38 @@
         icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
     });
 
+    // Don't allow event dates in the past
+    document.querySelector('input[name="event_date"]').min = new Date().toISOString().split('T')[0];
+
     document.getElementById('quote-form').addEventListener('submit', async function(e) {
         e.preventDefault();
+
+        // If the invisible honeypot field is filled in, it's a bot — pretend success, send nothing
+        if (this.elements['company'].value) {
+            window.location.href = '/thankyou/';
+            return;
+        }
+
+        var submitBtn = document.getElementById('submit-btn');
+        var errorBox = document.getElementById('form-error');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+        errorBox.classList.add('hidden');
+
         var formData = new FormData(this);
+        formData.delete('company');
         try {
             await fetch('https://hook.us2.make.com/7cw0sakcih3qsskhgk9fhqkk1axm8x34', {
                 method: 'POST',
                 mode: 'no-cors',
                 body: formData
             });
-        } catch (err) {}
-        window.location.href = '/thankyou/';
+            window.location.href = '/thankyou/';
+        } catch (err) {
+            errorBox.classList.remove('hidden');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit';
+        }
     });
 </script>
 </body>
